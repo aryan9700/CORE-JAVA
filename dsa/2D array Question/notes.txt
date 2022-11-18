@@ -1,0 +1,2 @@
+searching in matrix = same as we do in 2d array
+worst case=N*N=O(N^2)
