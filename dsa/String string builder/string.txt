@@ -1,0 +1,48 @@
+    String name ="kunal"
+datatype  ref.variable  object
+String a="kunal"
+String b="kunal"
+how this store in memory?
+[A]= a & b BOTH POINTING to same "kunal"
+[B]= a & b Both pointing to two different "kunal"
+concepts:-
+1.string pool-makes our program more optimize
+it create a pool in heap memory where it store kunal then point every kunal object in stack to this pool.
+so that conserve memory
+2.string are immutability in java 
+you cannot change the string//for security reasons
+why we can't modify string objects?
+if there is 4 person with same name kunal then when one kunal change his name all kunal name will get change
+ because it points same pool
+
+ comparison of string:-
+ 1. == method ; Comparator a-->"kunal"              a----->"kunal"
+                           b-->"kunal"              b-------^  
+                           a==b will give false     a==b will give true
+   check if ref. variable are pointing to same object                        
+
+ //how to create a different object of same value
+ String a = new String("kunal")                         
+ String b = new String("kunal")  
+ //creating this values outside the pool but in heap only // a==b:false
+
+ 2.when you only need to check values, use .equals method. //a==b :true
+ System.out.println(a.equals(b));
+
+ 3.charAt() to get index value
+System.out.println(a.charAt(0)); output = k
+
+we want to print anything in java it call for to string method
+System.out.println(56); for all type of datatype
+.valueof ; if no value null and if have any value then to.String
+Integer.toString inside java program code
+this happen without calling Integers.toString brecause primitive datatype store in stack memory
+no wrapper class needed
+
+System.out.println(new int[]{2,3,4,5});
+//output some random values =[I@3fee733d
+to get actually array we need to tell java to print preety value 
+System.out.println(Arrays.toString(new int[]{2,3,4,5}));
+//output: = [2, 3, 4, 5]
+wrapper class needed
+
