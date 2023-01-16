@@ -1,17 +1,6 @@
 package recursion;
 
-public class reverseano {
-    static int sum = 0;
-
-    static void rev1(int n) {
-        if (n == 0) {
-            return;
-        }
-        int remain = n % 10;
-        sum = sum * 10 + remain;
-        rev1(n / 10);
-    }
-
+public class palindrome {
     static int rev2(int n) {
         // sometimes you need some extra variables in argument
         // in that case make another funtion
@@ -27,10 +16,12 @@ public class reverseano {
         return rem * (int) (Math.pow(10, digits - 1)) + helper(n / 10, digits - 1);
     }
 
+    static boolean palin(int n) {
+        return (n == rev2(n));
+    }
+
     public static void main(String[] args) {
-        // rev1(1234);
-        // System.out.print(sum);
-        System.out.print(rev2(1234));
+        System.out.print(palin(1234321));
 
     }
 }
