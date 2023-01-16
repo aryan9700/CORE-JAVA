@@ -2,7 +2,7 @@ package ArrayRecursion;
 
 public class arraysortcheck {
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 5, 7, 9 };
+        int[] arr = { 1, 3, 8, 7, 9 };
         System.out.println(sorted(arr, 0));
     }
 
