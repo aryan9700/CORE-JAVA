@@ -5,5 +5,6 @@ public class Ascii {
         char ch = 'a';
         System.out.println(ch + 0);
         System.out.println((char) (ch + 0));
+        System.out.println((char)(ch - '0'));
     }
 }
